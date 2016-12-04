@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>blog</title>
+<style type="text/css">
+*{margin:0;padding:0;border:0;}
+.box {
+border-bottom:2px solid #e5e3da;
+width:100% ;
+height:30px;
+margin:0px auto;
+padding:0px 0px;
+
+
+}
+.top-nav {
+padding:0px 0px ;
+list-style:none;
+margin:0 auto;
+width:720px;
+height:100%;
+}
+
+.top-nav li{float:left;
+line-height:35px;
+list-style:none;
+margin:0px 0px;
+
+
+}
+
+.top-nav li a:link{
+display:block;
+width:120px;
+height:30px;
+color:#FFF;
+background-color:#277fc2;
+text-align:center;
+text-decoration:none;
+
+}
+.top-nav li a:hover{
+text-decoration:none;
+color:#fa6700;
+background:#004993;
+}
+.maincontent{
+width:1000px;
+height:800px;
+position:static;
+border:1px solid #e5e3da;
+margin:0px auto auto auto;
+}
+.sidediv{
+	width:300px;
+	height:100%;
+	border:1px solid #e5e3da;
+	margin:0;
+	float:left;
+}
+
+.side-nav {
+	margin:50% 15%;
+	list-style: none;
+	
+}
+.side-nav li{
+border:1px solid #e5e3da;
+width:200px;
+height:20px;
+
+text-align:center;
+padding:1% ;
+}
+.side-nav li a{
+	margin:0px 20%;
+    text-decoration: none;
+    width:100%;
+	text-align:center;
+	color:#999;
+	font: normal bold 18px arial,sans-serif;
+}
+.newscontent {
+width:68%;
+height:100%;
+border:1px solid #e5e3da;
+position:relative;
+margin:0px 0px 0px 320px;
+text-align:center;
+font: normal bold 20px arial,sans-serif;
+
+
+
+}
+.newscontent a{
+	text-decoration: none;
+	color: #277fc2;
+}  
+.newscontent a:hover{
+	font-style:italic;
+	color:#000;
+}
+
+</style>
+</head>
+
+<body>
+<div class="box" >
+<ul class="top-nav">
+   <li><a href="http://www.baidu.com">首页</a></li>
+   <li><a href="#">首页</a></li>
+   <li><a href="#">首页</a></li>
+   <li><a href="#">首页</a></li>
+   <li><a href="#">首页</a></li>
+   <li><a href="#">首页</a></li>
+</ul>
+</div>
+<div class="maincontent" >
+	<div class="sidediv">
+	 <ul class="side-nav">
+	  <li><a href="#">侧边</a></li>
+	  <li><a href="#">侧边</a></li>
+	  <li><a href="#">侧边</a></li>
+	  <li><a href="#">侧边</a></li>
+	  <li><a href="#">侧边</a></li>
+	 </ul>
+	</div>
+<div class="newscontent">
+{% for key, value in dic.items  %}
+{% for a,b in value.items %}
+    <a href="{{ a }}">{{ key }}:{{ b}}</a> 
+    {% endfor %}
+    <p></p>
+{% endfor %}
+
+</div>
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;width:100%;">
+ runoob.com</div>
+
+</div>
+
+</body>
+</html>
